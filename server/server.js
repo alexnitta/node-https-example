@@ -9,7 +9,8 @@ var https = require('https');
  
 // serve static files
 app.use(express.static(__dirname + '/../client/www'));
- 
+
+// serve index.html from site root 
 app.get('/', (req, res) => {
   res.sendFile(path.resolve('../client/index.html'));
 });
@@ -17,8 +18,8 @@ app.get('/', (req, res) => {
 // set up path to key and certificate files
  
 var options = {
-  key: fs.readFileSync('path-to-privkey.pem'),
-  cert: fs.readFileSync('path-to-cert.pem')
+  key: fs.readFileSync('/etc/letsencrypt/live/node-https-example.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/node-https-example.com/cert.pem')
 };
  
 // create an HTTPS service 
