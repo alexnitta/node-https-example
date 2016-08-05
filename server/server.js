@@ -10,7 +10,9 @@ var https = require('https');
 // serve static files
 app.use(express.static(__dirname + '/../client/www'));
  
-// [ set up routing with 'app.use' here ] 
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve('../client/index.html'));
+});
  
 // set up path to key and certificate files
  
