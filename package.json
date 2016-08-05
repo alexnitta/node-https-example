@@ -1,0 +1,27 @@
+{
+  "name": "node-https-example",
+  "version": "1.0.0",
+  "description": "A simple example of how to set up HTTPS in a Node.js server with Let's Encrypt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexnitta/node-https-example.git"
+  },
+  "keywords": [
+    "node",
+    "https",
+    "let's",
+    "encrypt",
+    "ssl",
+    "certificate"
+  ],
+  "author": "Alex Nitta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexnitta/node-https-example/issues"
+  },
+  "homepage": "https://github.com/alexnitta/node-https-example#readme"
+}
