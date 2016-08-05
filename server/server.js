@@ -1,10 +1,11 @@
 // server.js, a simplified example
  
-var express = require('express');
-var fs = require('fs');
-var http = require('http');
-var https = require('https');
- 
+const express = require('express');
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
+
+const app = express(); 
 // [ set up database connection, authentication, logging ... ] 
  
 // serve static files
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
  
 // set up path to key and certificate files
  
-var options = {
+const options = {
   key: fs.readFileSync('/etc/letsencrypt/live/node-https-example.com/privkey.pem'),
   cert: fs.readFileSync('/etc/letsencrypt/live/node-https-example.com/cert.pem')
 };
