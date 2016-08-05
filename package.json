@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/alexnitta/node-https-example/issues"
   },
-  "homepage": "https://github.com/alexnitta/node-https-example#readme"
+  "homepage": "https://github.com/alexnitta/node-https-example#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
