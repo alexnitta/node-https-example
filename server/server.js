@@ -6,7 +6,8 @@ const http = require('http');
 const https = require('https');
 const path = require('path');
 
-const app = express(); 
+const app = express();
+
 // [ set up database connection, authentication, logging ... ] 
  
 // serve static files
@@ -17,12 +18,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('../client/index.html'));
 });
 
-// for temporary use only during LetsEncrypt setup with the --webroot plugin
-// delete the following line once you have finished setting up the certificate files 
+// for temporary use only during LetsEncrypt setup with --webroot plugin
+// comment or delete the following line once you have finished 
+// setting up the certificate files 
 http.createServer(app).listen(80);
 
-// uncomment the following once you have set up the certificate files and deleted the 
-// above code: http.createServer(app).listen(80);
+// uncomment the following once you have set up the certificate files and 
+// deleted or commented the createServer line above
 
 /* 
 
