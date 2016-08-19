@@ -4,6 +4,7 @@ const express = require('express');
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
+const path = require('path');
 
 const app = express(); 
 // [ set up database connection, authentication, logging ... ] 
@@ -15,7 +16,16 @@ app.use(express.static(__dirname + '/../client/www'));
 app.get('/', (req, res) => {
   res.sendFile(path.resolve('../client/index.html'));
 });
- 
+
+// for temporary use only during LetsEncrypt setup with the --webroot plugin
+// delete the following line once you have finished setting up the certificate files 
+http.createServer(app).listen(80);
+
+// uncomment the following once you have set up the certificate files and deleted the 
+// above code: http.createServer(app).listen(80);
+
+/* 
+
 // set up path to key and certificate files
  
 const options = {
@@ -36,3 +46,5 @@ http.createServer(function (req, res) {
   res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
   res.end();
 }).listen(80);
+
+*/
