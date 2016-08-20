@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 /************
 for temporary use only during LetsEncrypt setup with --webroot plugin
-comment or delete the following line once you have finished 
+comment or delete the following lines once you have finished 
 setting up the certificate files 
 *************/
 
@@ -29,8 +29,8 @@ console.log('node-https-example server listening on port 80. Remember to' +
   ' modify server.js after you set up letsencrypt certificates.');
 
 /************
-uncomment the following once you have set up the certificate files and 
-deleted or commented the createServer line above
+uncomment the following lines once you have set up the certificate files
+and deleted or commented the lines above
 *************/
 
 /* 
